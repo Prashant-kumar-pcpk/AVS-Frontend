@@ -1,8 +1,10 @@
 import Link from "next/link";
+
 import {  projects, currentProjects, services, serviceList } from "../lib/siteContent";
-import CampaignSlider from "../campaign/slider";
+import CampaignSlider from "./campaign/slider";
 import Search from "../components/Search";
 import CurrentProject from "./currentProject/page";
+import LeadForm from "@/app/popUp/BrochureModel";
 
 
 
@@ -12,6 +14,8 @@ export const metadata = {
 };
 
 export default function Home() {
+
+  
   return (
     <>
     < CampaignSlider />
@@ -41,23 +45,11 @@ export default function Home() {
         support.
       </p>
       {/* Buttons */}
-      <div className="mt-8 flex flex-wrap gap-3 sm:gap-4">
-        <a
-          href="/contact"
-          className="rounded-full bg-amber-500 px-5 py-3 text-sm font-semibold text-slate-900 transition hover:bg-amber-400 sm:px-6 sm:text-base">
-          Book Site Visit
-        </a>
-
+      <div className="mt-8 flex flex-wrap ">
         <a
           href="/contact"
           className="rounded-full bg-blue-600 px-5 py-3 text-sm font-semibold text-white transition hover:bg-blue-700 sm:px-6 sm:text-base">
           Free Consultation
-        </a>
-
-        <a
-          href="https://wa.me/919582295821"
-          className="rounded-full bg-green-600 px-5 py-3 text-sm font-semibold text-white transition hover:bg-green-700 sm:px-6 sm:text-base">
-          WhatsApp
         </a>
       </div>
 

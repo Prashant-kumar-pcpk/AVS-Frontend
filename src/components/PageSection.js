@@ -9,3 +9,4 @@ export default function PageSection({ title, eyebrow, children, className = "" }
     </section>
   );
 }
+  

@@ -1,7 +1,7 @@
 
 // import Link from "next/link";
 import { currentProjects } from "@/lib/siteContent"
-import LeadForm from "@/popUp/BrochureModel";
+import LeadForm from "@/app/popUp/BrochureModel";
 
 
 export default function CurrentProject () {

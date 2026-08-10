@@ -54,7 +54,7 @@ export default function CampaignSlider() {
     setCurrent((prev) => (prev - 1 + slides.length) % slides.length);
 
   return (
-    <section className="relative h-[300px] sm:h-[400px] lg:h-[550px] overflow-hidden">
+    <section className="relative h-[300px] sm:h-[400px] lg:h-[500px] overflow-hidden">
       {slides.map((slide, index) => (
         <div
           key={slide.id}
@@ -69,16 +69,13 @@ export default function CampaignSlider() {
             }}
           />
 
-          <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-cyan-500/50 to-black/20" />
+          <div 
+          className="absolute inset-0 bg-gradient-to-r from-black/80 via-cyan-500/50 to-black/20"/>
 
           <div className="relative z-10 flex h-full items-center">
             <div className="mx-auto max-w-7xl px-6 lg:px-8">
 
-              {/* <span className="inline-block rounded-full bg-red-600 px-5 py-2 text-sm font-bold uppercase tracking-wider">
-                🔥 {slide.subtitle}
-              </span> */}
-
-              <h1 className="mt-6 max-w-3xl text-5xl font-bold leading-tight lg:text-7xl">
+              <h1 className="mt-4 max-w-3xl text-5xl font-bold leading-tight lg:text-7xl">
                 {slide.title}
               </h1>
 
@@ -86,11 +83,11 @@ export default function CampaignSlider() {
                 {slide.offer}
               </h2>
 
-              <p className="mt-6 max-w-2xl text-lg text-gray-200">
+              <p className="mt-4 max-w-2xl text-lg text-gray-200">
                 {slide.description}
               </p>
 
-              <div className="mt-10 flex flex-wrap gap-4">
+              <div className="mt-8 flex flex-wrap gap-4">
                 <Link
                   href="/contact"
                   className="rounded-full bg-amber-500 px-8 py-4 font-semibold text-black hover:bg-amber-400"
@@ -99,7 +96,7 @@ export default function CampaignSlider() {
                 </Link>
 
                 <Link
-                  href="/projectPage"
+                  href="/currentProject"
                   className="rounded-full border border-white px-8 py-4 font-semibold hover:bg-white hover:text-black"
                 >
                   Explore Projects
@@ -117,8 +114,7 @@ export default function CampaignSlider() {
 
       <button
         onClick={prevSlide}
-        className="absolute left-6 top-1/2 z-20 -translate-y-1/2 rounded-full bg-white/20 p-4 text-white backdrop-blur hover:bg-white/40"
-      >
+        className="absolute left-6 top-1/2 z-20 -translate-y-1/2 rounded-full bg-white/20 p-4 text-white backdrop-blur hover:bg-white/40">
         ❮
       </button>
 

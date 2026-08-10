@@ -1,12 +1,12 @@
-
 "use client";
 
-
 import { useState } from "react";
+import SuccessPopup from "./SuccessPopUp";
 
 export default function LeadForm () {
   
   const [open, setOpen] = useState(false);
+  const [successOpen, setSuccessOpen] = useState(false)
   const [form, setForm] = useState({
     name: "",
     phone: "",
@@ -64,6 +64,9 @@ export default function LeadForm () {
       document.body.appendChild(link);
       link.click();
       document.body.removeChild(link);
+
+      // 3. Open Success Popup 
+         setSuccessOpen(true);
 
     } catch (err) {
       console.error(err);
@@ -150,6 +153,11 @@ export default function LeadForm () {
           </div>
         </div>
       )}
+
+      {/* Success Popup */} 
+      <SuccessPopup 
+      open={successOpen} 
+      onClose={() => setSuccessOpen(false)} />
     </>
   );
 }
