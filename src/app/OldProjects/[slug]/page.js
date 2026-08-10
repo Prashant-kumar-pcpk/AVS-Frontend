@@ -24,7 +24,7 @@ export default function ProjectDetailPage({ params }) {
 
   return (
     <main className="min-h-screen bg-[#f7f3ea] text-slate-900">
-      <section className="mx-auto max-w-6xl px-6 py-24 sm:px-8 lg:px-12">
+      <section className="mx-auto max-w-6xl px-6 py-8 sm:px-8 lg:px-12">
         <Link href="/projects" className="text-sm font-semibold text-amber-700">← Back to Projects</Link>
         <div className="mt-8 overflow-hidden rounded-[36px] bg-white shadow-[0_20px_60px_rgba(15,23,42,0.08)]">
           <img src={project.image} alt={project.name} className="h-80 w-full object-cover" />

@@ -9,7 +9,7 @@ export default function CurrentProject () {
   
 
     return(
-    <section className="py-28 md:py-24 bg-white">
+    <section className="py-8 md:py-16 bg-white">
   {/* ================= CURRENT PROJECT ================= */}
   <div className="mx-auto w-[min(1160px,calc(100%-48px))] max-w-[1160px]">
     {currentProjects.map((project) => (

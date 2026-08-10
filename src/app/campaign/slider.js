@@ -54,16 +54,16 @@ export default function CampaignSlider() {
     setCurrent((prev) => (prev - 1 + slides.length) % slides.length);
 
   return (
-    <section className="relative h-[300px] sm:h-[400px] lg:h-[500px] overflow-hidden">
+    <section className="relative md:h-[300px] sm:h-[500px] lg:h-[500px] overflow-hidden">
       {slides.map((slide, index) => (
         <div
           key={slide.id}
-          className={`absolute inset-0 transition-opacity duration-1000 ${
-            index === current ? "opacity-100" : "opacity-0"
-          }`}
-        >
+            className={`absolute inset-0 transition-opacity duration-1000 ${
+          index === current ? "opacity-100" : "opacity-0"
+         }`} >
+
           <div
-            className="absolute inset-0 bg-cover bg-center"
+            className="absolute inset-0 bg-no-repeat bg-center bg-contain sm:bg-cover"
             style={{
               backgroundImage: `url(${slide.image})`,
             }}

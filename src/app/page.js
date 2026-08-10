@@ -65,9 +65,9 @@ export default function Home() {
 {/* ================= CURRENT PROJECTS ================= */}
   <CurrentProject /> 
 
-<section className="py-28 md:py-24 bg-white">
+<section className="py-8 md:py-12 bg-white">
   {/* ================= DELIVERED PROJECTS ================= */}
-  <div className="mx-auto mt-12 max-w-7xl px-6">
+  <div className="mx-auto mt-4 max-w-7xl px-6">
 
     <div className="mb-12 flex flex-col items-start justify-between gap-6 md:flex-row md:items-end">
       <div>

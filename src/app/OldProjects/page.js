@@ -9,7 +9,7 @@ export const metadata = {
 export default function ProjectsPage() {
   return (
     <main className="min-h-screen bg-[#f7f3ea] text-slate-900">
-      <section className="mx-auto max-w-7xl px-6 py-24 sm:px-8 lg:px-12">
+      <section className="mx-auto max-w-7xl px-8 py-8 sm:px-8 lg:px-12">
         <div className="max-w-3xl">
           <p className="text-sm font-semibold uppercase tracking-[0.35em] text-amber-700">Featured Projects</p>
           <h1 className="mt-4 text-4xl font-semibold sm:text-5xl">Premium properties designed for lasting value.</h1>
