@@ -26,7 +26,7 @@ export default function Footer () {
                             <li><a href="/" className="text-slate-400 hover:text-amber-400">Home</a></li>
                             <li><a href="/about" className="text-slate-400 hover:text-amber-400">About Us</a></li>
                             <li><a href="/properties" className="text-slate-400 hover:text-amber-400">Properties</a></li>
-                            <li><a href="/blogs" className="text-slate-400 hover:text-amber-400">Blogs</a></li>
+                            <li><a href="/contact" className="text-slate-400 hover:text-amber-400">Contact</a></li>
                         </ul>
                         </div>
 
@@ -34,11 +34,12 @@ export default function Footer () {
                         <h2 className="mb-4 text-lg font-semibold">Contact Us</h2>
                         <ul className="mt-3 space-y-3">
                         <li>
-                            <a href="mailto:info@avsrealty.com"
+                            <a href="mailto:sarnamrealtech@gmail.com"
                             className="flex items-center gap-2 text-slate-400 hover:text-amber-400" >
                             <ImMail2 />
                             Mails:
                             </a>
+                            <p className="text-slate-500">sarnamrealtech@gmail.com</p>
                         </li>
 
                         <li>
@@ -47,6 +48,7 @@ export default function Footer () {
                             <FiPhoneCall />
                             Phone:
                             </a>
+                            <p className="text-sm text-slate-500">+91 9582295821</p>
                         </li>
 
                         <li>
