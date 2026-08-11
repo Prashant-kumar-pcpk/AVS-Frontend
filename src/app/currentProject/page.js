@@ -1,5 +1,5 @@
 
-// import Link from "next/link";
+import Link from "next/link";
 import { currentProjects } from "@/lib/siteContent"
 import LeadForm from "@/app/popUp/BrochureModel";
 
@@ -59,9 +59,11 @@ export default function CurrentProject () {
           </div>
 
           <div className="flex flex-wrap gap-4 pt-4">
-            <button className="rounded-full bg-[#08244b] px-8 py-4 text-white hover:bg-[#cfaa54]">
+            <Link 
+            href = "/contact"
+            className="rounded-full bg-[#08244b] px-8 py-4 text-white hover:bg-[#cfaa54]">
               Book Site Visit
-            </button>
+            </Link>
 
             <LeadForm />
 
