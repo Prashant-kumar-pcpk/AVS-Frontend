@@ -6,7 +6,6 @@ import LeadForm from "@/app/popUp/BrochureModel";
 
 export default function CurrentProject () {
 
-  
 
     return(
     <section className="py-8 md:py-16 bg-white">
