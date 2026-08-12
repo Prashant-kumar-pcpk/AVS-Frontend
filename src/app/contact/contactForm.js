@@ -41,7 +41,7 @@ export default function ContactForm() {
             return alert(data.message);
             }
 
-            alert("Contact saved successfully!");
+            alert("Thank you! We’ll contact you soon.");
 
             // Form reset
             setFormData({

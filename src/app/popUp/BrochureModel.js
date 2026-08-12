@@ -47,7 +47,7 @@ export default function LeadForm () {
       } 
 
       // Success 
-        alert("Lead submitted successfully!");
+        alert("Thank you! We’ll contact you soon.");
 
       // Close popup
       setOpen(false);
