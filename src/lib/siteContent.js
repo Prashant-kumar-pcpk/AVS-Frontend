@@ -68,18 +68,21 @@ export const categories = [
 
 export const testimonials = [
   {
+     id:"1",
     name: "Aarav Sharma",
     role: "Home Buyer",
     quote: "AVS made our home-buying journey smooth, transparent, and truly premium.",
     rating: 5,
   },
   {
+     id:"2",
     name: "Mira Kapoor",
     role: "Investor",
     quote: "Their advice helped us choose a property with excellent rental and appreciation potential.",
     rating: 5,
   },
   {
+     id:"3",
     name: "Sanjay & Priya Singh",
     role: "Family",
     quote: "From site visits to paperwork, everything felt professional and stress-free.",
@@ -98,31 +101,37 @@ export const stats = [
 
 export const serviceList = [
         {
+          id:"1",
           icon: "🏡",
           title: "Verified Properties",
           text: "Every property is legally verified before being listed.",
         },
         {
+          id:"2",
           icon: "👨‍💼",
           title: "Trusted Experts",
           text: "Professional advisors help you at every stage.",
         },
         {
+           id:"3",
           icon: "💰",
           title: "Transparent Pricing",
           text: "No hidden charges with complete cost transparency.",
         },
         {
+           id:"4",
           icon: "📍",
           title: "Prime Locations",
           text: "Premium projects in high-growth investment areas.",
         },
         {
+          id:"5",
           icon: "🤝",
           title: "Customer Satisfaction",
           text: "Dedicated relationship managers for seamless support.",
         },
         {
+           id:"6",
           icon: "🏦",
           title: "Home Loan Support",
           text: "Easy loan assistance from leading banks and NBFCs.",

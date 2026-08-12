@@ -31,12 +31,12 @@ export default function Properties() {
     <main className="min-h-screen bg-[#f8f7f3] text-[#17243a]">
 
       {/* ================= HERO ================= */}
-      <section className="relative flex min-h-[500px] items-center overflow-hidden bg-[#17243a]">
+      <section className="relative flex min-h-[540px] items-center overflow-hidden bg-[#17243a]">
         <div
-          className="absolute inset-0 bg-cover bg-center"
+          className="absolute inset-0 bg-contain bg-center bg-no-repeat "
           style={{
             backgroundImage:
-              "url('/properties/properties-hero.jpg')",
+              "url('/Assets/house-with-front-side.jpg')",
           }}
         />
 

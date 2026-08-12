@@ -1,3 +1,5 @@
+
+
 import PageSection from "../../components/PageSection";
 import { testimonials, serviceList } from "../../lib/siteContent";
 
@@ -8,12 +10,12 @@ export const metadata = {
 
 export default function AboutPage() {
   return (
-
-    <PageSection
-  id="about"
-  className="bg-white py-24"
->
-  <div className="mx-auto max-w-7xl px-6 lg:px-8">
+    <main className="bg-white text-slate-900">
+      <PageSection
+        id="about"
+        className="bg-white min-h-screen py-24"
+      >
+        <div className="mx-auto max-w-7xl px-6 lg:px-8">
     <div className="grid items-center gap-12 lg:grid-cols-[0.9fr_1.1fr]">
 
       {/* Left Image */}
@@ -57,13 +59,6 @@ export default function AboutPage() {
           apartments, or searching for commercial spaces, our experienced
           advisors ensure a smooth and rewarding journey.
         </p>
-
-        {/* <a
-          href="/contact"
-          className="mt-8 inline-flex rounded-full bg-amber-500 px-7 py-3 font-semibold text-slate-900 transition hover:bg-amber-400"
-        >
-          Learn More
-        </a> */}
 
       </div>
 
@@ -119,7 +114,7 @@ export default function AboutPage() {
           <div className="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {serviceList.map((item) => (
               <div
-                key={item.title}
+                key={item.id}
                 className="group rounded-2xl bg-white p-5 shadow-md transition-all duration-300 hover:-translate-y-1 hover:shadow-xl">
                 {/* Icon */}
                 <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-amber-100 text-2xl">{item.icon}</div>
@@ -148,7 +143,7 @@ export default function AboutPage() {
         </div>
         <div className="mt-10 grid gap-6 md:grid-cols-3">
           {testimonials.map((item) => (
-            <div key={item.name} className="rounded-[28px] border border-white/10 bg-slate-900/70 p-6">
+            <div key={item.id} className="rounded-[28px] border border-white/10 bg-slate-900/70 p-6">
               <p className="text-amber-300">★★★★★</p>
               <p className="mt-4 text-sm leading-7 text-slate-300">“{item.quote}”</p>
               <p className="mt-6 font-semibold text-white">{item.name}</p>
@@ -159,8 +154,6 @@ export default function AboutPage() {
       </section>
   </div>
 </PageSection>
-
-
-    
+    </main>
   );
 }

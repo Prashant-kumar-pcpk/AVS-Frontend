@@ -1,6 +1,6 @@
 import Link from "next/link";
 
-import {  projects, currentProjects, services, serviceList } from "../lib/siteContent";
+import {  projects,  services, } from "../lib/siteContent";
 import CampaignSlider from "./campaign/slider";
 import Search from "../components/Search";
 import CurrentProject from "./currentProject/page";
@@ -84,8 +84,7 @@ export default function Home() {
 
     <div className="grid gap-8 sm:grid-cols-2 xl:grid-cols-2">
       {projects.map((project) => (
-        <article
-          key={project.slug}
+        <article key={project.slug}
           className="overflow-hidden rounded-3xl border border-slate-300 bg-white shadow-lg transition hover:-translate-y-2 hover:shadow-2xl" >
           <img
             src={project.image}

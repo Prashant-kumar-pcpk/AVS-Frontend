@@ -18,7 +18,7 @@ export default function BlogsPage() {
 
         <div className="mt-12 grid gap-8 md:grid-cols-2 xl:grid-cols-3">
           {blogs.map((blog) => (
-            <article key={blog.slug} className="overflow-hidden rounded-[28px] border border-white/10 bg-white/10 backdrop-blur">
+            <article key={blog.name} className="overflow-hidden rounded-[28px] border border-white/10 bg-white/10 backdrop-blur">
               <img src={blog.image} alt={blog.title} className="h-48 w-full object-cover" />
               <div className="p-6">
                 <h2 className="text-xl font-semibold">{blog.title}</h2>
