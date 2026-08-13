@@ -34,7 +34,7 @@ export default function ProjectsPage() {
                 {/* <p className="mt-2 text-sm text-slate-700">RERA: {project.rera}</p> */}
                 <p className="mt-4 text-sm leading-6 text-slate-600">{project.blurb}</p>
                 <div className="mt-6 flex flex-wrap gap-3">
-                  <Link href={`/projects/${project.id}`} className="rounded-full bg-slate-900 px-5 py-3 text-sm font-semibold text-white transition hover:bg-slate-700">
+                  <Link  href={`/propertiees/${project.slug}`} className="rounded-full bg-slate-900 px-5 py-3 text-sm font-semibold text-white transition hover:bg-slate-700">
                     View Details
                   </Link>
                   <a href="https://wa.me/919999999999?text=Hi%20AVS%2C%20I%20want%20to%20book%20a%20site%20visit" className="rounded-full border border-slate-300 px-5 py-3 text-sm font-semibold text-slate-800 transition hover:border-slate-900">

@@ -2,6 +2,7 @@
 export const properties = [
    {
     id: 1,
+    slug: "avs-current",
     title: "AVS ",
     location: "NH 24 Ghaziabad, Uttar Pradesh",
     type: "Residential",
@@ -16,6 +17,7 @@ export const properties = [
   },
   {
     id: 2,
+    slug: "city-palace",
     title: "AVS City Palace",
     location: "Raj Nagar Extension, Ghaziabad",
     type: "Residential",
@@ -34,6 +36,7 @@ export const properties = [
   },
   {
     id: 3,
+    slug: "elevation-plots",
     title: "AVS High Street",
      location: "Raj Nagar Extension, Ghaziabad",
     type: "Apartment",
@@ -53,6 +56,7 @@ export const properties = [
  
   {
     id: 4,
+    slug: "solstice-villas",
     title: "AVS City Square",
     location: "Raj Nagar Extension, Ghaziabad",
     type: "Homes",
@@ -71,6 +75,7 @@ export const properties = [
   },
   {
     id: 5,
+    slug: "surya-heights",
     title: "Surya Heights",
     location:"",
     type: "Residential",
@@ -87,6 +92,7 @@ export const properties = [
   },
   {
     id: 6,
+    slug: "sangwan-city",
     title:"Sangwan City",
     location: "Sangwan city , Aligarh",
     type: "Apartments",

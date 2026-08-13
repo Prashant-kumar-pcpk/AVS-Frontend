@@ -29,6 +29,43 @@ export default function Navbar() {
   }, []);
 
   return (
+    <>
+     {/* ==========moving textfor Desktop========== */}
+        <div className="overflow-hidden bg-[#1a519f] py-2 text-sm text-white">
+        {/* Desktop */}
+        <div className="hidden md:block overflow-hidden">
+          <div className="animate-marquee flex w-max whitespace-nowrap">
+            <span className="mx-8">AVS Real Estate</span>
+            <span className="mx-8">📧 sarnamrealtech@gmail.com</span>
+            <span className="mx-8">📞 +91 9582295821</span>
+
+            <span className="mx-8">AVS Real Estate</span>
+            <span className="mx-8">📧 sarnamrealtech@gmail.com</span>
+            <span className="mx-8">📞 +91 9582295821</span>
+          </div>
+        </div>
+
+        {/* Mobile */}
+        <div className="block md:hidden">
+          {/* Fixed Email + Phone */}
+          <div className="flex justify-center gap-4 whitespace-nowrap text-xs">
+            <span>📧 sarnamrealtech@gmail.com</span>
+            <span>📞 +91 9582295821</span>
+          </div>
+
+          {/* Moving Company Name */}
+          <div className="mt-1 overflow-hidden">
+            <div className="animate-marquee flex w-max whitespace-nowrap">
+              <span className="mr-0.5">AVS Real Estate</span>/
+              <span className="ml-0.5 mr-8">Sarnam.in</span>
+              <span className="ml-8 mr-0.5">AVS Real Estate</span>/
+              <span className="ml-0.5 mr-8">Sarnam.in</span>
+            </div>
+          </div>
+        </div>
+      </div>
+          
+
     <header
       className={`sticky top-0 z-50 bg-white shadow-md transition-all duration-300 ${
         scrolled ? "py-0" : ""
@@ -135,5 +172,6 @@ export default function Navbar() {
         </div>
       )}
     </header>
+    </>
   );
 }

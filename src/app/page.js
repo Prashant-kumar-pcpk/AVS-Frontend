@@ -32,7 +32,7 @@ export default function Home() {
   {/* Overlay */}
   <div className="absolute inset-0 bg-gradient-to-r from-slate-300/50 via-slate-900/70 to-slate-300/40" />
   {/* Content */}
-  <div className="relative z-10 mx-auto flex min-h-screen w-full max-w-7xl items-center px-5 sm:px-8 lg:px-12">
+  <div className="relative z-10 mx-auto flex min-h-screen w-full max-w-7xl items-center overflow-hidden px-4 sm:px-8 lg:px-12">
     <div className="w-full max-w-3xl py-24 sm:py-28 lg:py-0">
       {/* Heading */}
       <h1 className="text-4xl font-bold leading-tight text-white sm:text-5xl lg:text-6xl xl:text-7xl">
@@ -64,9 +64,8 @@ export default function Home() {
 
 {/* ================= CURRENT PROJECTS ================= */}
   <CurrentProject /> 
-
+{/* ================= DELIVERED PROJECTS ================= */}
 <section className="py-8 md:py-12 bg-white">
-  {/* ================= DELIVERED PROJECTS ================= */}
   <div className="mx-auto mt-4 max-w-7xl px-6">
 
     <div className="mb-12 flex flex-col items-start justify-between gap-6 md:flex-row md:items-end">
@@ -102,7 +101,7 @@ export default function Home() {
             <p className="mt-2 text-sm text-slate-500"> {project.location} </p>
 
             <Link
-              href={`/properties/${project.slug}`}
+              href={`/propertiees/detailpage?slug=${project.slug}`}
               className="mt-5 inline-flex rounded-full bg-[#08244b] px-6 py-3 text-sm font-semibold text-white hover:bg-amber-500" >
               View Details
             </Link>
@@ -183,14 +182,14 @@ export default function Home() {
     </section>
 
 
-      <section className=" px-24 py-20 bg-white">
-        <div className="flex items-end px-8 justify-between gap-4">
+      <section className="bg-white px-4 py-12 sm:px-6 md:px-12 lg:px-24 md:py-20">
+      <div className="flex flex-col items-start justify-between gap-4 px-2 sm:flex-row sm:items-end sm:px-4">
           <div>
             <p className="text-sm font-semibold uppercase tracking-[0.35em] text-amber-400">Services</p>
             <h2 className="mt-3 text-3xl font-semibold text-black sm:text-4xl">Tailored property solutions</h2>
           </div>
         </div>
-        <div className="mt-10 grid gap-6 px-8 md:grid-cols-2 xl:grid-cols-4">
+        <div className="mt-10 grid grid-cols-1 gap-6 px-2 sm:grid-cols-2 sm:px-4 xl:grid-cols-4">
           {services.map((service) => (
             <div key={service.title} className="rounded-[28px] border border-white/10 bg-slate-900/70 p-6">
               <h3 className="text-xl font-semibold">{service.title}</h3>
