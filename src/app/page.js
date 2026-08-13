@@ -1,10 +1,12 @@
 import Link from "next/link";
 
 import {  projects,  services, } from "../lib/siteContent";
-import CampaignSlider from "./campaign/slider";
+// import CampaignSlider from "./campaign/slider";
 import Search from "../components/Search";
-import CurrentProject from "./currentProject/page";
-import LeadForm from "@/app/popUp/BrochureModel";
+// import CurrentProject from "./currentProject/page";
+// import LeadForm from "@/app/popUp/BrochureModel";
+// import ProjectTabs from "@/components/projectTabs";
+import ProjectSection from "@/components/projectSection";
 
 
 
@@ -16,11 +18,14 @@ export const metadata = {
 export default function Home() {
 
   
+
   return (
     <>
-    < CampaignSlider />
+
+    {/* < CampaignSlider /> */}
   <main className="min-h-screen text-white">
-  <section className="relative min-h-screen overflow-hidden">
+
+  <section className="relative min-h-screen overflow-visible">
   {/* Background */}
   <div
     className="absolute inset-0 bg-cover bg-center bg-no-repeat"
@@ -60,10 +65,16 @@ export default function Home() {
 
     </div>
   </div>
+
+   {/* PROJECT TABS */}
+   <ProjectSection />
+
+
 </section>
 
-{/* ================= CURRENT PROJECTS ================= */}
-  <CurrentProject /> 
+
+
+
 {/* ================= DELIVERED PROJECTS ================= */}
 <section className="py-8 md:py-12 bg-white">
   <div className="mx-auto mt-4 max-w-7xl px-6">
@@ -101,7 +112,7 @@ export default function Home() {
             <p className="mt-2 text-sm text-slate-500"> {project.location} </p>
 
             <Link
-              href={`/propertiees/detailpage?slug=${project.slug}`}
+               href={`/propertiees/${project.slug}`}
               className="mt-5 inline-flex rounded-full bg-[#08244b] px-6 py-3 text-sm font-semibold text-white hover:bg-amber-500" >
               View Details
             </Link>

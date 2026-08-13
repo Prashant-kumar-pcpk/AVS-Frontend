@@ -4,6 +4,7 @@ export const properties = [
     id: 1,
     slug: "avs-current",
     title: "AVS ",
+    processing:"Running Project",
     location: "NH 24 Ghaziabad, Uttar Pradesh",
     type: "Residential",
     category: "Apartment",

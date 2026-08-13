@@ -21,6 +21,8 @@ export default function ProjectsPage() {
         <div className="mt-12 grid gap-8 md:grid-cols-2 xl:grid-cols-3">
           {properties.map((project) => (
             <article key={project.id} className="overflow-hidden rounded-[32px] border border-slate-200 bg-white shadow-[0_20px_60px_rgba(15,23,42,0.08)]">
+               <span className="rounded-full px-5 py-2 text-sm font-semibold text-red-600">{project.processing}</span>
+               
               <img src={project.image} alt={project.title} className="h-56 w-full object-cover" />
               <div className="p-6">
                 <div className="flex items-center justify-between gap-3">

@@ -24,11 +24,14 @@ export const projects = [
       "/Assets/avs-high-street.jpg",
     blurb: "Luxury homes crafted for elevated family living with premium amenities.",
   },
+
+  
 ];
 
 export const currentProjects = [
   {
-    name: "AVS County",
+    
+    name: "AVS ",
     location: "Raj Nagar Extension, Ghaziabad",
     status: "Under Construction",
     configuration: "2, 3 & 4 BHK Luxury Apartments",
@@ -37,6 +40,17 @@ export const currentProjects = [
     brochure: "/Brochure/avs combine brochure.pdf",
     description:
       "Experience premium living with spacious apartments, world-class amenities, landscaped gardens, clubhouse, swimming pool, and excellent connectivity.",
+      gallery:[
+        "/properties/AVS Current-Project.jpeg",
+        "/properties/img17.jpg",
+        "/properties/img20.jpg",
+        "/properties/img23.jpg",
+        "/properties/img26.jpg",
+        "/properties/img29.jpg",
+        "/properties/img31.jpg",
+        "/properties/img34.jpg",
+        "/properties/img37.jpg",
+      ],
   },
 ];
 
