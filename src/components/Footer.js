@@ -44,7 +44,6 @@ export default function Footer() {
   return (
     <>
       {/* ================= FOOTER ================= */}
-
       <footer
         ref={footerRef}
         className="bg-[#07111f] py-6 pb-24 text-white md:pb-6">
@@ -69,9 +68,9 @@ export default function Footer() {
                 <ul className="space-y-2">
                   <li><a href="/" className="text-slate-400 hover:text-amber-400" >  Home </a> </li>
                   <li><a href="/about" className="text-slate-400 hover:text-amber-400"  > About </a></li>
-                  <li><a href="/properties" className="text-slate-400 hover:text-amber-400" >  Properties </a> </li>
+                  <li><a href="/propertiees" className="text-slate-400 hover:text-amber-400" >  Properties </a> </li>
                   <li> <a  href="/contact" className="text-slate-400 hover:text-amber-400" >  Contact </a></li>
-                  <li><a href="/blog" className="text-slate-400 hover:text-amber-400"> Blogs</a></li>
+                  <li><a href="/blogs" className="text-slate-400 hover:text-amber-400"> Blogs</a></li>
                 </ul>
               </div>
 

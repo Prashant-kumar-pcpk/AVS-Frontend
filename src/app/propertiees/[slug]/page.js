@@ -1,6 +1,6 @@
 
 import Link from "next/link";
-import { properties } from "../../../data/siteContent";
+import { properties,floorPlans } from "../../../data/siteContent";
 
 export default async function PropertyDetail({ params }) {
   const { slug } = await params;
@@ -57,39 +57,20 @@ export default async function PropertyDetail({ params }) {
 
         </div>
 
-        {/* =====================================================
-            PROPERTY TITLE
-        ====================================================== */}
+        {/* =============== PROPERTY TITLE ================= */}
         <div className="py-10">
-
           <div className="flex flex-col justify-between gap-5 md:flex-row md:items-end">
-
             <div>
-              <p className="text-sm font-bold uppercase tracking-[0.2em] text-[#cfaa54]">
-                AVS REAL ESTATE
-              </p>
-
-              <h1 className="mt-2 text-3xl font-bold text-[#17243a] sm:text-5xl">
-                {property.title}
-              </h1>
-
-              <p className="mt-3 text-gray-500">
-                📍 {property.location}
-              </p>
+              <p className="text-sm font-bold uppercase tracking-[0.2em] text-[#cfaa54]">  AVS REAL ESTATE </p>
+              <h1 className="mt-2 text-3xl font-bold text-[#17243a] sm:text-5xl"> {property.title} </h1>
+              <p className="mt-3 text-gray-500">  📍 {property.location} </p>
             </div>
 
             <div className="md:text-right">
-              <p className="text-sm text-gray-500">
-                Starting Price
-              </p>
-
-              <p className="mt-1 text-3xl font-bold text-[#cfaa54]">
-                {property.price}
-              </p>
+              <p className="text-sm text-gray-500"> Starting Price </p>
+              <p className="mt-1 text-3xl font-bold text-[#cfaa54]">  {property.price} </p>
             </div>
-
           </div>
-
         </div>
 
         {/* ========= SECTION NAVIGATION ========== */}
@@ -120,6 +101,7 @@ export default async function PropertyDetail({ params }) {
             </a>
           </div>
         </div>
+
         {/* =========== MAIN GRID============ */}
         <div className="grid gap-10 lg:grid-cols-3">
 
@@ -197,78 +179,51 @@ export default async function PropertyDetail({ params }) {
                 ))}
               </div>
             </section>
-
-            {/* =================================================
-                FLOOR PLANS
-            ================================================== */}
-            <section id="floor-plans"
-              className="scroll-mt-24 rounded-3xl bg-white p-7 shadow-sm sm:p-10">
-
+                        
+            {/* ============== FLOOR PLANS =============== */}
+            <section id="floor-plans" className="scroll-mt-24 rounded-3xl bg-white p-7 shadow-sm sm:p-10">
               <div className="border-b border-gray-100 pb-6">
                 <p className="text-sm font-bold uppercase tracking-widest text-[#cfaa54]"> ▦ Floor Plans </p>
                 <h2 className="mt-2 text-3xl font-bold"> Choose Your Perfect Home </h2>
-
-                <p className="mt-3 text-gray-500">
-                  Explore different configurations, areas and pricing.
-                </p>
+                <p className="mt-3 text-gray-500"> Explore different configurations, areas and pricing. </p>
               </div>
 
               <div className="mt-8 space-y-5">
-                {(
-                  property.floorPlans || [
-                    {
-                      type: "2 BHK",
-                      area: "1100 Sq.Ft.",
-                      price: "₹45 Lakh*",
-                      image: property.floorPlanImages?.[0],
-                    },
-                    {
-                      type: "3 BHK",
-                      area: "1450 Sq.Ft.",
-                      price: "₹65 Lakh*",
-                      image: property.floorPlanImages?.[1],
-                    },
-                    {
-                      type: "4 BHK",
-                      area: "1900 Sq.Ft.",
-                      price: "₹85 Lakh*",
-                      image: property.floorPlanImages?.[2],
-                    },
-                  ]
-                ).map((plan) => (
-
+                {(floorPlans[property.slug] || []).map((plan) => (
                   <div
                     key={plan.type}
                     className="overflow-hidden rounded-2xl border border-gray-100 bg-[#f8f7f3]"
                   >
-
                     <div className="grid md:grid-cols-3">
 
-                      {/* Floor Plan Image */}
-                      <div className="relative min-h-[220px] bg-white">
+                     {/* Floor Plan Image */}
+                    <div className="relative min-h-[220px]">
+                      {plan.images?.length > 0 ? (
+                        <div className="grid grid-cols-2 gap-3 p-5">
+                          {plan.images.map((image, index) => (
+                            <img
+                              key={index}
+                              src={image}
+                              alt={`${plan.type} Floor Plan ${index + 1}`}
+                              className="h-48 w-full rounded-xl bg-white object-contain"
+                            />
+                          ))}
+                        </div>
+                      ) : (
+                        <div className="flex h-full min-h-[220px] items-center justify-center">
+                          <div className="text-center">
+                            <div className="text-5xl">▦</div>
 
-                        {plan.image ? (
-                          <img
-                            src={plan.image}
-                            alt={`${plan.type} Floor Plan`}
-                            className="h-full w-full object-contain p-5"
-                          />
-                        ) : (
-                          <div className="flex h-full min-h-[220px] items-center justify-center">
-                            <div className="text-center">
-                              <div className="text-5xl">▦</div>
-                              <p className="mt-2 text-sm text-gray-400">
-                                Floor Plan
-                              </p>
-                            </div>
+                            <p className="mt-2 text-sm text-gray-400">
+                              Floor Plan
+                            </p>
                           </div>
-                        )}
-
-                      </div>
+                        </div>
+                      )}
+                    </div>
 
                       {/* Plan Details */}
                       <div className="p-7 md:col-span-2">
-
                         <p className="text-sm font-semibold uppercase tracking-widest text-[#cfaa54]">
                           Residential Plan
                         </p>
@@ -278,7 +233,6 @@ export default async function PropertyDetail({ params }) {
                         </h3>
 
                         <div className="mt-5 grid grid-cols-2 gap-4">
-
                           <div>
                             <p className="text-sm text-gray-500">
                               Area
@@ -298,7 +252,6 @@ export default async function PropertyDetail({ params }) {
                               {plan.price}
                             </p>
                           </div>
-
                         </div>
 
                         <Link
@@ -307,22 +260,15 @@ export default async function PropertyDetail({ params }) {
                         >
                           Get Floor Plan →
                         </Link>
-
                       </div>
 
                     </div>
-
                   </div>
-
                 ))}
-
               </div>
-
             </section>
-
-            {/* =================================================
-                LOCATION
-            ================================================== */}
+            
+      {/* ===========  LOCATION ============== */}
             <section
               id="location"
               className="scroll-mt-24 rounded-3xl bg-white p-7 shadow-sm sm:p-10"

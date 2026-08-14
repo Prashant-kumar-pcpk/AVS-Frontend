@@ -108,7 +108,30 @@ export const properties = [
     featured: false,
     blurb: "A modern residential township with excellent infrastructure and amenities."
   },
+  
 ];
+
+export const floorPlans = {
+  "avs-current": [
+    {
+      type: "3 BHK",
+      area: "1300 Sq.Ft.",
+      price: "₹79.79 Lakh*",
+      image: ["/properties/img23.jpg",
+              "/properties/img26.jpg",
+              "/properties/img29.jpg",
+              "/properties/img31.jpg",
+      ]
+    },
+    {
+      type: "4 BHK",
+      area: " Sq.Ft.",
+      price: "Coming Soon..",
+      image: "/properties/img34.jpg",
+    },
+  ],
+}
+
 
 export const services = [
   { title: "Buy Property", description: "Curated options for first-time buyers, families, and investors." },

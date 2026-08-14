@@ -25,55 +25,67 @@ export default function Home() {
     {/* < CampaignSlider /> */}
   <main className="min-h-screen text-white">
 
-  <section className="relative min-h-screen overflow-visible">
-  {/* Background */}
-  <div
-    className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-    style={{
-      backgroundImage:
-        "url('https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=2000&q=85')",
-    }} />
+  <section className="relative w-full overflow-hidden">
 
-  {/* Overlay */}
-  <div className="absolute inset-0 bg-gradient-to-r from-slate-300/50 via-slate-900/70 to-slate-300/40" />
-  {/* Content */}
-  <div className="relative z-10 mx-auto flex min-h-screen w-full max-w-7xl items-center overflow-hidden px-4 sm:px-8 lg:px-12">
-    <div className="w-full max-w-3xl py-24 sm:py-28 lg:py-0">
-      {/* Heading */}
-      <h1 className="text-4xl font-bold leading-tight text-white sm:text-5xl lg:text-6xl xl:text-7xl">
-        Find Your Dream Home with AVS
-      </h1>
-      {/* Description */}
-      <p className="mt-5 max-w-2xl text-base leading-7 text-slate-300 sm:text-lg sm:leading-8">
-        Premium residential and commercial properties at the best
-        locations, backed by trusted advisors and seamless site visit
-        support.
-      </p>
-      {/* Buttons */}
-      <div className="mt-8 flex flex-wrap ">
-        <a
-          href="/contact"
-          className="rounded-full bg-blue-600 px-5 py-3 text-sm font-semibold text-white transition hover:bg-blue-700 sm:px-6 sm:text-base">
-          Free Consultation
-        </a>
+  {/* HERO */}
+  <div className="relative h-[420px] w-full sm:h-[460px] lg:h-[500px]">
+
+    {/* Background Image */}
+    <div
+      className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+      style={{
+        backgroundImage:
+          "url('https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=2000&q=85')",
+      }}
+    />
+
+    {/* Overlay */}
+    <div className="absolute inset-0 bg-white/20" />
+
+    {/* Hero Content */}
+    <div className="relative z-10 mx-auto flex h-full w-full max-w-7xl items-center px-4 sm:px-8 lg:px-12">
+
+      <div className="w-full max-w-2xl">
+
+        {/* Heading */}
+        <h1 className="text-4xl font-bold leading-[1.1] tracking-tight text-slate-800 sm:text-5xl lg:text-6xl">
+          Find Dream Home with
+          <span className="block text-blue-600">
+            AVS
+          </span>
+        </h1>
+
+        {/* Buttons */}
+        <div className="mt-6 flex flex-wrap items-center gap-3">
+
+          <a
+            href="/contact"
+            className="rounded-full bg-blue-600 px-5 py-3 text-sm font-semibold text-white shadow-lg transition-all duration-300 hover:-translate-y-1 hover:bg-blue-700 sm:px-6 sm:text-base"
+          >
+            Get Free Consultation
+          </a>
+
+          <a
+            href="/propertiees"
+            className="rounded-full border border-slate-300 bg-white/80 px-5 py-3 text-sm font-semibold text-slate-700 backdrop-blur-sm transition-all duration-300 hover:-translate-y-1 hover:bg-white sm:px-6 sm:text-base"
+          >
+            Explore Properties
+          </a>
+
+        </div>
+
       </div>
-
-      {/* Search */}
-      <div className="mt-10 w-full max-w-2xl">
-        <Search />
-      </div>
-
     </div>
   </div>
 
-   {/* PROJECT TABS */}
-   <ProjectSection />
-
+  {/* PROJECT SECTION */}
+  <div 
+    id="project-section"
+    className="relative z-20 w-full bg-white">
+    <ProjectSection />
+  </div>
 
 </section>
-
-
-
 
 {/* ================= DELIVERED PROJECTS ================= */}
 <section className="py-8 md:py-12 bg-white">

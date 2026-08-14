@@ -23,7 +23,8 @@ export default function BlogsPage() {
               <div className="p-6">
                 <h2 className="text-xl font-semibold">{blog.title}</h2>
                 <p className="mt-3 text-sm leading-6 text-slate-300">{blog.excerpt}</p>
-                <Link href={`/blogs/${blog.slug}`} className="mt-6 inline-flex text-sm font-semibold text-amber-300">
+                <Link href={``} 
+                className="mt-6 inline-flex text-sm font-semibold text-amber-300">
                   Read More →
                 </Link>
               </div>
