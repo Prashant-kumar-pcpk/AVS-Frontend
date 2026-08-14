@@ -35,7 +35,7 @@ export default function Home() {
       className="absolute inset-0 bg-cover bg-center bg-no-repeat"
       style={{
         backgroundImage:
-          "url('/brochure/Avs-home.avif')",
+          "url('/images/avs-homes.jpg')",
       }}
     />
 
