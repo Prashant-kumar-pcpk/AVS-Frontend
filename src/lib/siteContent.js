@@ -32,9 +32,9 @@ export const currentProjects = [
   {
     
     name: "AVS ",
-    location: "Raj Nagar Extension, Ghaziabad",
+    location: "NH-24, Ghaziabad",
     status: "Under Construction",
-    configuration: "2, 3 & 4 BHK Luxury Apartments",
+    configuration: " 3 & 4 BHK Luxury Apartments",
     price: "Starting ₹79.79 Lakh*",
     image: "/Assets/img20.jpg",
     brochure: "/Brochure/avs combine brochure.pdf",

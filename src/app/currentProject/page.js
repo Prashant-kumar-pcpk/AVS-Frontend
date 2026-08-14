@@ -296,7 +296,7 @@ function PriceContent({ project }) {
       <h2 className="text-4xl font-semibold text-[#08244b]"> Pricing Details</h2>
         <div className="rounded-3xl bg-[#f8f7f3] p-7">
           <p className="text-sm text-gray-500"> Starting Price </p>
-          <p className="mt-2 text-4xl font-bold text-[#cfaa54]"> {project.price} </p>
+          <p className="mt-2 text-4xl font-bold text-[#f67206]"> {project.price} </p>
           <p className="mt-4 leading-7 text-gray-600">
             Contact our property experts for the latest pricing,
             availability and payment plans.
