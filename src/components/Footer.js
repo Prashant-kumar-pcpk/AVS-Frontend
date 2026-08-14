@@ -51,9 +51,9 @@ export default function Footer() {
           <div className="flex flex-col items-center justify-between gap-8 md:flex-row">
             
             {/* Logo */}
-            <div className="flex h-20 w-20 shrink-0 items-center justify-center rounded-full bg-white p-2 shadow-lg ring-2 ring-amber-400">
+            <div className="flex h-20 w-22 shrink-0 items-center justify-center rounded-full bg-white p-1 shadow-lg ring-2 ring-amber-400">
               <img
-                src="/AVS logos.png"
+                src="/AVS infra.jpg"
                 alt="AVS Logo"
                 className="h-full w-full rounded-full object-contain" />
             </div>

@@ -77,7 +77,7 @@ export default function Navbar() {
         <Link href="/" className="flex items-center gap-3">
           <div className="flex h-12 w-20 items-center justify-center">
             <img
-              src="/AVS logos.png"
+              src="/AVS infra.jpg"
               alt="AVS Logo"
               className="object-contain"
             />
