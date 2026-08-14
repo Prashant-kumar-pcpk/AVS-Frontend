@@ -185,7 +185,7 @@ export default function Home() {
           <div className="mt-10 flex flex-wrap gap-10 sm:gap-4 lg:gap-10">
 
             <Link
-              href="/propertiees"
+              href="/OldProjects"
               className="rounded-full bg-amber-500 px-7 py-3 text-base font-semibold text-[#08244b] transition hover:bg-amber-400"
             >
               Explore Projects
