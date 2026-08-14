@@ -316,7 +316,7 @@ export default function Footer() {
                 </a>
 
                 <a
-                href="/properties"
+                href="/propertiees"
                 onClick={() => setOpenMenu(false)}
                 className="rounded-xl px-4 py-3 text-slate-300 transition hover:bg-slate-800 hover:text-amber-400"
                 >
@@ -324,7 +324,7 @@ export default function Footer() {
                 </a>
 
                 <a
-                href="/blog"
+                href="/blogs"
                 onClick={() => setOpenMenu(false)}
                 className="rounded-xl px-4 py-3 text-slate-300 transition hover:bg-slate-800 hover:text-amber-400"
                 >
