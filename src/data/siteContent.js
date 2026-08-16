@@ -50,7 +50,7 @@ export const properties = [
     possession: "Done",
     rera: "RERA-4567",
     image:
-      "/Assets/avs-high-street.jpg",
+      "/Assets/AVS-high-street.jpg",
     featured: true,
     blurb: "High-growth plots in a well-connected corridor with excellent appreciation potential.",
   },
@@ -70,7 +70,7 @@ export const properties = [
     status: "Delivered",
     rera: "HRERA-1234",
     image:
-      "/Assets/AVS City Square.jpg",
+      "/Assets/avs-city-square.jpg",
     featured: false,
     blurb: "Luxury homes crafted for elevated family living with premium amenities.",
   },

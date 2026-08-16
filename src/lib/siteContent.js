@@ -9,7 +9,7 @@ export const projects = [
     possession: "Ready",
     rera: "UPRERA-9876",
     image:
-      "/Assets/AVS city square.jpg",
+      "/Assets/avs-city-square.jpg",
     blurb: "Private villa living with smart eco-friendly design and lush landscapes.",
   },
   {
