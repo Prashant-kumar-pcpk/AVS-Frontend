@@ -30,14 +30,14 @@ export default function Home() {
   {/* HERO */}
   <div className="relative h-[420px] w-full sm:h-[460px] lg:h-[500px]">
 
-    {/* Background Image */}
-    <div
-      className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-      style={{
-        backgroundImage:
-          "url('/images/avs-homes.jpg')",
-      }}
-    />
+      {/* Background Image */}
+    <div className="absolute inset-0">
+      <img
+        src="/images/avs-homes.jpg"
+        alt="AVS Homes"
+        className="h-full w-full object-cover"
+      />
+    </div>
 
     {/* Overlay */}
     <div className="absolute inset-0 bg-white/20" />
@@ -84,7 +84,6 @@ export default function Home() {
     className="relative z-20 w-full bg-white">
     <ProjectSection />
   </div>
-
 </section>
 
 {/* ================= DELIVERED PROJECTS ================= */}
