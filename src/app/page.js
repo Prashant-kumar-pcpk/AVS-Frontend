@@ -2,10 +2,6 @@ import Link from "next/link";
 
 import {  projects,  services, } from "../lib/siteContent";
 // import CampaignSlider from "./campaign/slider";
-import Search from "../components/Search";
-// import CurrentProject from "./currentProject/page";
-// import LeadForm from "@/app/popUp/BrochureModel";
-// import ProjectTabs from "@/components/projectTabs";
 import ProjectSection from "@/components/projectSection";
 
 

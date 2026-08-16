@@ -9,7 +9,7 @@ export const projects = [
     possession: "Ready",
     rera: "UPRERA-9876",
     image:
-      "/Assets/AVS City Square.jpg",
+      "/Assets/AVS city square.jpg",
     blurb: "Private villa living with smart eco-friendly design and lush landscapes.",
   },
   {
@@ -21,7 +21,7 @@ export const projects = [
     status: "Delivered",
     rera: "RERA-4567",
     image:
-      "/Assets/avs-high-street.jpg",
+      "/Assets/AVS-high-street.jpg",
     blurb: "Luxury homes crafted for elevated family living with premium amenities.",
   },
 
