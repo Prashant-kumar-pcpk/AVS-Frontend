@@ -50,7 +50,7 @@ export const properties = [
     possession: "Done",
     rera: "RERA-4567",
     image:
-      "/Assets/AVS-high-street.jpg",
+      "/Assets/avs-high-street.jpg",
     featured: true,
     blurb: "High-growth plots in a well-connected corridor with excellent appreciation potential.",
   },

@@ -21,7 +21,7 @@ export const projects = [
     status: "Delivered",
     rera: "RERA-4567",
     image:
-      "/Assets/AVS-high-street.jpg",
+      "/Assets/avs-high-street.jpg",
     blurb: "Luxury homes crafted for elevated family living with premium amenities.",
   },
 
