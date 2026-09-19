@@ -1,6 +1,108 @@
 
 import Link from "next/link";
+import Image from "next/image";
 import { properties,floorPlans } from "../../../data/siteContent";
+import JsonLd from "../../../components/JsonLD";
+
+function parsePrice(price) {
+  if (!price) return null;
+
+  const cleaned = String(price)
+    .replace(/,/g, "")
+    .toLowerCase()
+    .trim();
+
+  // Example: ₹79.79 Lakh*
+  const lakhMatch = cleaned.match(/([\d.]+)\s*lakh/);
+
+  if (lakhMatch) {
+    return String(Number(lakhMatch[1]) * 100000);
+  }
+
+  // Example: ₹1.25 Crore*
+  const croreMatch = cleaned.match(/([\d.]+)\s*crore/);
+
+  if (croreMatch) {
+    return String(Number(croreMatch[1]) * 10000000);
+  }
+
+  // Plain numeric price
+  const numericMatch = cleaned.match(/^\D*([\d.]+)$/);
+
+  if (numericMatch) {
+    return String(Number(numericMatch[1]));
+  }
+
+  return null;
+}
+
+export async function generateMetadata({ params }) {
+  const { slug } = await params;
+
+  const property = properties.find(
+    (item) => item.slug === slug
+  );
+
+  if (!property) {
+    return {
+      title: "Property Not Found | AVS Real Estate",
+      description: "The requested property could not be found.",
+    };
+  }
+
+  return {
+    title: `${property.title} | AVS Real Estate`,
+    description:
+      property.description ||
+      `Explore ${property.title} in ${property.location}. View price, configuration, area, amenities, floor plans and location details with AVS Real Estate.`,
+
+    keywords: [
+      property.title,
+      property.location,
+      property.type,
+      property.configure,
+      "AVS Real Estate",
+      "properties in Ghaziabad",
+      "property for sale in Ghaziabad",
+      "luxury property in Ghaziabad",
+    ],
+
+    alternates: {
+      canonical: `https://avsdeveloper.com/propertiees/${property.slug}`,
+    },
+
+    openGraph: {
+      title: `${property.title} | AVS Real Estate`,
+      description:
+        property.description ||
+        `Explore ${property.title} in ${property.location}.`,
+      url: `https://avsdeveloper.com/propertiees/${property.slug}`,
+      siteName: "AVS Real Estate",
+      type: "website",
+      images: property.image
+        ? [
+            {
+              url: property.image,
+              width: 1200,
+              height: 630,
+              alt: property.title,
+            },
+          ]
+        : [],
+    },
+
+    robots: {
+      index: true,
+      follow: true,
+    },
+  };
+}
+
+export async function generateStaticParams() {
+  return properties.map((property) => ({
+    slug: property.slug,
+  }));
+}
 
 export default async function PropertyDetail({ params }) {
   const { slug } = await params;
@@ -28,7 +130,69 @@ export default async function PropertyDetail({ params }) {
     );
   }
 
+  const propertyUrl = `https://avsdeveloper.com/propertiees/${property.slug}`;
+
+const propertyImage = property.gallery?.[0] || property.image;
+
+const propertyImageUrl = propertyImage
+  ? `https://avsdeveloper.com${propertyImage}`
+  : undefined;
+
+  const priceValue = parsePrice(property.price);
+
+const structuredData = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebPage",
+      "@id": `${propertyUrl}#webpage`,
+      "url": propertyUrl,
+      "name": `${property.title} | AVS Real Estate`,
+      "description":
+        property.description ||
+        `Explore ${property.title} in ${property.location}.`,
+      "about": {
+        "@id": `${propertyUrl}#property`
+      }
+    },
+
+    {
+      "@type": "Apartment",
+      "@id": `${propertyUrl}#property`,
+      "name": property.title,
+      "description":
+        property.description ||
+        `Explore ${property.title} in ${property.location}.`,
+      "image": propertyImageUrl ? [propertyImageUrl] : [],
+
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Ghaziabad",
+        "addressRegion": "Uttar Pradesh",
+        "addressCountry": "IN"
+      },
+
+      "offers": {
+      "@type": "Offer",
+      "url": propertyUrl,
+      "priceCurrency": "INR",
+      ...(priceValue ? { "price": priceValue } : {})
+      }
+    },
+
+    {
+      "@type": "Organization",
+      "@id": "https://avsdeveloper.com/#organization",
+      "name": "AVS Real Estate",
+      "url": "https://avsdeveloper.com"
+    }
+  ]
+};
+
   return (
+    <>
+    <JsonLd data={structuredData} />
+
     <main className="min-h-screen bg-[#f8f7f3] text-[#17243a]">
 
       {/* =============== HERO / PROPERTY GALLERY ============== */}
@@ -39,19 +203,28 @@ export default async function PropertyDetail({ params }) {
 
           {/* Main Image */}
           <div className="relative aspect-[4/3] overflow-hidden rounded-2xl bg-slate-100 sm:col-span-2 sm:row-span-2">
-            <img
+            <Image
               src={property.gallery?.[0] || property.image}
-              alt={`${property.title} — Exterior`}
-              className="absolute inset-0 h-full w-full object-cover transition duration-500 hover:scale-105"/>
-          </div>
+              alt={`${property.title} - Exterior`}
+              fill
+              priority
+              sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 600px"
+              className="object-cover transition duration-500 hover:scale-105"
+            />
+            </div>
 
           {/* Gallery Images */}
           {property.gallery?.slice(1, 5).map((image, index) => (
             <div key={image}
               className="relative hidden aspect-[4/3] overflow-hidden rounded-2xl bg-slate-100 sm:block">
 
-              <img src={image} alt={`${property.title} — Image ${index + 2}`}
-                className="absolute inset-0 h-full w-full object-cover transition duration-500 hover:scale-105"/>
+             <Image
+                src={image}
+                alt={`${property.title} - Property Image ${index + 2}`}
+                fill
+                sizes="(max-width: 640px) 100vw, 25vw"
+                className="object-cover transition duration-500 hover:scale-105"
+              />
             </div>
           ))}
 
@@ -506,6 +679,7 @@ export default async function PropertyDetail({ params }) {
       </section>
 
     </main>
+    </>
   );
 }
 

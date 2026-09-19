@@ -16,11 +16,15 @@ const geistMono = Geist_Mono({
 
 export const metadata = {
   metadataBase: new URL("https://avsdeveloper.com"),
+
   title: {
     default: "AVS | Premium Real Estate in India",
     template: "%s | AVS",
   },
-  description: "Premium residential and commercial properties by AVS with expert consultation, site visits, home loan support, and transparent guidance.",
+
+  description:
+    "Premium residential and commercial properties by AVS with expert consultation, site visits, home loan support, and transparent guidance.",
+
   keywords: [
     "real estate",
     "luxury apartments",
@@ -30,21 +34,25 @@ export const metadata = {
     "flats in Noida",
     "premium homes",
   ],
+
   openGraph: {
     title: "AVS | Premium Real Estate in India",
-    description: "Luxury homes and premium investment opportunities tailored for buyers and investors.",
+    description:
+      "Luxury homes and premium investment opportunities tailored for buyers and investors.",
     type: "website",
     url: "https://avsdeveloper.com",
-    images: ["https://images.unsplash.com/photo-1512918728675-ed5a9ecdebfd?auto=format&fit=crop&w=1200&q=80"],
+    images: [
+      "https://images.unsplash.com/photo-1512918728675-ed5a9ecdebfd?auto=format&fit=crop&w=1200&q=80",
+    ],
   },
+
   twitter: {
     card: "summary_large_image",
     title: "AVS | Premium Real Estate in India",
     description: "Premium residential and commercial properties by AVS.",
-    images: ["https://images.unsplash.com/photo-1512918728675-ed5a9ecdebfd?auto=format&fit=crop&w=1200&q=80"],
-  },
-  alternates: {
-    canonical: "https://www.avsdeveloper.com",
+    images: [
+      "https://images.unsplash.com/photo-1512918728675-ed5a9ecdebfd?auto=format&fit=crop&w=1200&q=80",
+    ],
   },
 };
 
