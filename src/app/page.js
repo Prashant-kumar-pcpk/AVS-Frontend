@@ -8,7 +8,27 @@ import ProjectSection from "@/components/projectSection";
 
 export const metadata = {
   title: "AVS | Premium Real Estate in India",
-  description: "Discover premium residential and commercial properties with AVS. Book site visits, get expert consultation, and explore luxury apartments, villas, and plots.",
+  description:
+    "Explore premium residential properties in india with AVS. Discover 3 & 4 BHK homes, current projects, property details, site visits and expert real estate assistance.",
+  alternates: {
+    canonical: "https://avsdeveloper.com/",
+  },
+  openGraph: {
+    title: "AVS | Premium Real Estate in India",
+    description:
+      "Explore premium residential properties and current projects in India with AVS.",
+    url: "https://avsdeveloper.com/",
+    siteName: "AVS",
+    type: "website",
+    images: [
+      {
+        url: "https://avsdeveloper.com/images/avs-homes.jpg",
+        width: 1200,
+        height: 630,
+        alt: "AVS premium residential homes",
+      },
+    ],
+  },
 };
 
 export default function Home() {
@@ -105,7 +125,7 @@ export default function Home() {
           className="overflow-hidden rounded-3xl border border-slate-300 bg-white shadow-lg transition hover:-translate-y-2 hover:shadow-2xl" >
           <img
             src={project.image}
-            alt={project.name}
+            alt={`${project.name} - premium property in ${project.location}`}
             className="h-60 w-full object-cover"/>
 
           <div className="p-5">
@@ -154,13 +174,13 @@ export default function Home() {
           </span>
 
           {/* Heading */}
-          <h1 className="mt-8 text-4xl font-bold leading-tight text-slate-900 sm:text-5xl lg:text-6xl">
+          <h2 className="mt-8 text-5xl font-bold leading-tight text-slate-900 sm:text-5xl lg:text-6xl">
             Building Trust.
             <br />
             <span className="text-amber-400">
               Creating Better Living.
             </span>
-          </h1>
+          </h2>
 
           {/* Alternative Heading */}
           <h2 className="mt-6 text-xl font-medium text-slate-700 sm:text-2xl">

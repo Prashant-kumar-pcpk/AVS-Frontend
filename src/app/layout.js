@@ -44,7 +44,7 @@ export const metadata = {
     images: ["https://images.unsplash.com/photo-1512918728675-ed5a9ecdebfd?auto=format&fit=crop&w=1200&q=80"],
   },
   alternates: {
-    canonical: "https://avsdeveloper.com",
+    canonical: "https://www.avsdeveloper.com",
   },
 };
 
