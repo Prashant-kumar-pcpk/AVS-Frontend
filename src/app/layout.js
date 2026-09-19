@@ -15,7 +15,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata = {
-  metadataBase: new URL("https://www.avsrealty.com"),
+  metadataBase: new URL("https://avsdeveloper.com"),
   title: {
     default: "AVS | Premium Real Estate in India",
     template: "%s | AVS",
@@ -26,7 +26,7 @@ export const metadata = {
     "luxury apartments",
     "villas",
     "plots",
-    "property in Gurgaon",
+    "property in Ghaziabad",
     "flats in Noida",
     "premium homes",
   ],
@@ -34,7 +34,7 @@ export const metadata = {
     title: "AVS | Premium Real Estate in India",
     description: "Luxury homes and premium investment opportunities tailored for buyers and investors.",
     type: "website",
-    url: "https://www.avsrealty.com",
+    url: "https://avsdeveloper.com",
     images: ["https://images.unsplash.com/photo-1512918728675-ed5a9ecdebfd?auto=format&fit=crop&w=1200&q=80"],
   },
   twitter: {
@@ -44,7 +44,7 @@ export const metadata = {
     images: ["https://images.unsplash.com/photo-1512918728675-ed5a9ecdebfd?auto=format&fit=crop&w=1200&q=80"],
   },
   alternates: {
-    canonical: "https://www.avsrealty.com",
+    canonical: "https://avsdeveloper.com",
   },
 };
 

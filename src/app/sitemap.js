@@ -1,5 +1,5 @@
 export default function sitemap() {
-  const baseUrl = 'https://www.avsrealty.com';
+  const baseUrl = 'https://avsdeveloper.com';
 
   return [
     {

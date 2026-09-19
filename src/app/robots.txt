@@ -1,3 +1,4 @@
 User-agent: *
 Allow: /
-Sitemap: https://www.avsrealty.com/sitemap.xml
+
+Sitemap: https://avsdeveloper.com/sitemap.xml
